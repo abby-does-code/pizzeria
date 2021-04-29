@@ -7,3 +7,8 @@ class Pizza(models.Model):
 
     def __str__(self):
         return self.pizza_type
+
+    
+
+
+"""class Toppings():"""

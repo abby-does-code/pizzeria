@@ -6,9 +6,11 @@ import django
 
 django.setup()
 
-from pizzas.models import Pizza
+from pizzas.models import Pizza, Topping
 
 pizzas = Pizza.objects.all()
 
 for pizza in pizzas:
     print(pizza.id, pizza)
+
+

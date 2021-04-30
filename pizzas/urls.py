@@ -12,5 +12,6 @@ urlpatterns = [
     # Notes: the first argument is empty string which matches the base URL
     ## The second arugment specifies the funciton name to call in views.
     ### Third argument provides the name 'index' for this URL to refer to later
-    path("", views.index, name="index")
+    path("", views.index, name="index"),
+    path("pizzas", views.pizzas, name="pizzas"),
 ]

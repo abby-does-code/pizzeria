@@ -12,3 +12,9 @@ from django.shortcuts import render
 def index(request):
     """Home page"""
     return render(request, "pizzas/index.html")
+
+
+def pizzas(request):
+    """Shows the user the pizzas"""
+    pizzas = Pizza.objects.order_by(date_added)
+    return render(request, "pizzas")

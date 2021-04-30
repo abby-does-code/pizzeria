@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Pizza, Topping
 
 # Create your views here.
 # When URL request matches the pattern just defined,

@@ -5,11 +5,10 @@
 <h2>Our Pizzas:</h2>
 
 <ul>
-    {%for pizza in pizzas%}
-    <li>
-        <a href="{% url 'pizzas:pizzas' pizza.id %}">{{pizza}}</a>
-
+    {% for pizza in pizzas %}
+    <li>{{ pizza }}
     </li>
+    {% endfor %}
 </ul>
 
 

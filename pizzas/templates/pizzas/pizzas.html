@@ -2,8 +2,16 @@
 
 {% block content %}
 
-<h1>ABBY'S PIZZERIA</h1>
+<h2>Our Pizzas:</h2>
 
-<h2>The best classic pizzas in town!</h2>
+<ul>
+    {%for pizza in pizzas%}
+    <li>
+        <a href="{% url 'pizzas:pizzas' pizza.id %}">{{pizza}}</a>
+
+    </li>
+</ul>
+
+
 
 {% endblock content %}

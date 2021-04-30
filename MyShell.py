@@ -14,4 +14,13 @@ for pizza in pizzas:
     print(pizza.id, pizza)
 
 
+p = Pizza.objects.get(id=1)
+print(p.pizza_name)
+print(p.date_added)
 
+toppings = p.topping_set.all()
+
+for topping in toppings:
+    print(topping)
+
+#This works! yayyayay. 

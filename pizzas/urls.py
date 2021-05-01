@@ -18,3 +18,5 @@ urlpatterns = [
     # Individual pizzas
     path("comments/<int:pizza_id>/", views.comments, name="comments"),
 ]
+
+

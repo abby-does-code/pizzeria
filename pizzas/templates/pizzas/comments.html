@@ -1,0 +1,19 @@
+{% extends "pizza/base.html" %}
+
+{% block content %}
+
+<h2>
+    <p>Pizza: {{ pizza.pizza_name }}</p>
+</h2>
+<ul>
+    <form method="POST">
+        {% for c in comments %}
+        <li>
+            <p>
+                {{c.comment_text}}
+            </p>
+
+        </li>
+    </form>
+</ul>
+</>

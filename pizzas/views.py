@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Pizza, Topping
+from .models import Pizza, Topping, Comment
 
 # Create your views here.
 # When URL request matches the pattern just defined,
@@ -31,6 +31,24 @@ def pizza(request, pizza_id):
 
     return render(request, "pizzas/pizza.html", context)
 
-def comment(request, pizza_id):
+
+def comments(request, pizza_id):
     """Allows user to add a comment"""
-    comment = 
+    # We're going to want a button that creates a link??
+    # Uh oh--might have to play around and create the button later
+
+    # checking to see if request method is POST
+    # and if the submit button was clicked
+    if request.method == "POST" and request.POST.get("btn1"):
+        # Get whatever is in the box
+        comment = request.POST.get("comment")
+        Comment.objects.create(
+            pizza_id=pizza_id, comment_text=comment, date_added=date.today()
+        )
+
+    pizza = Pizza.objects.get(id=pizza_id)
+    comments = Comment.objects.filter(pizza=pizza_id)
+
+    context = {"pizza": pizza, "comments": comment}
+
+    return render(request, "pizza/comments.html", context)

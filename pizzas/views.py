@@ -27,13 +27,11 @@ def pizza(request, pizza_id):
     """Allows user to view individual pizzas"""
     pizza = Pizza.objects.get(id=pizza_id)
     toppings = pizza.topping_set.all()
+    pizza_image = pizza.pizza_image.get()
 
-    context = {"pizza": pizza, "toppings": toppings}
+    context = {"pizza": pizza, "toppings": toppings, "pizza_image": pizza_image}
 
     return render(request, "pizzas/pizza.html", context)
-
-
-
 
 
 def comments(request, pizza_id):
@@ -56,5 +54,3 @@ def comments(request, pizza_id):
     context = {"pizza": pizza, "comments": comments}
 
     return render(request, "pizzas/comments.html", context)
-
-

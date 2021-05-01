@@ -14,4 +14,6 @@ urlpatterns = [
     ### Third argument provides the name 'index' for this URL to refer to later
     path("", views.index, name="index"),
     path("pizzas", views.pizzas, name="pizzas"),
+    path("pizza/<int:pizza_id>/", views.pizza, name="pizza"),
+    # Individual pizzas
 ]

@@ -20,3 +20,13 @@ def pizzas(request):
     pizzas = Pizza.objects.order_by("-date_added")
     context = {"pizzas": pizzas}
     return render(request, "pizzas/pizzas.html", context)
+
+
+def pizza(request, pizza_id):
+    pizza = Pizza.object.get(id=pizza_id)
+
+    toppings = pizza.toppingset.order_by("topping_name")
+
+    context = {"pizza": pizza, "toppings": toppings}
+
+    return render(request, "pizzas/pizza.html", context)

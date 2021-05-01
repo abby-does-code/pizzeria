@@ -1,16 +1,18 @@
 {% extends "pizzas/base.html" %}
 
-{% block content %}
 
+{% block page_header %}
 <h2>{{ pizza }}</h2>
+{% block page_header %}
 
+{% block content %}
 <ul>
     <p>Toppings Included:</p>
 
     {% for topping in toppings %}
-    <li>
+    <div class="card mb -3">
         {{ topping }}
-    </li>
+    </div> 
     {% endfor %}
 </ul>
 

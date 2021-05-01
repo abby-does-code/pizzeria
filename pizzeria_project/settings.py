@@ -33,6 +33,8 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # My apps
     "pizzas",
+    # Third Party Apps
+    "bootsrap4",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",

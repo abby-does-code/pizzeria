@@ -16,4 +16,5 @@ urlpatterns = [
     path("pizzas", views.pizzas, name="pizzas"),
     path("pizzas/<int:pizza_id>/", views.pizza, name="pizza"),
     # Individual pizzas
+    path("comments/<int:pizza_id>/", views.comments, name="comments"),
 ]

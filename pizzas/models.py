@@ -8,9 +8,6 @@ class Pizza(models.Model):
     def __str__(self):
         return self.pizza_name
 
-    def add_image(self):
-        
-
 
 class Topping(models.Model):
     pizza_name = models.ForeignKey(Pizza, on_delete=models.CASCADE)

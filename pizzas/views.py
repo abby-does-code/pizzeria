@@ -18,8 +18,8 @@ def index(request):
 
 def pizzas(request):
     """Shows the user the pizzas"""
-    pizzas = Pizza.objects.order_by("-date_added")
-    context = {"pizzas": pizzas}
+    pi = Pizza.objects.order_by("-date_added")
+    context = {"pizzas": pi}
     return render(request, "pizzas/pizzas.html", context)
 
 

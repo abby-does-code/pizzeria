@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Pizza, Topping, Comment
+import datetime as datetime
 
 # Create your views here.
 # When URL request matches the pattern just defined,
@@ -42,7 +43,7 @@ def comments(request, pizza_id):
         # Get whatever is in the box
         comment = request.POST.get("comment")
         comment = Comment.objects.create(
-            pizza_id=pizza_id, comment_text=comment, date_added=date.today()
+            pizza_id=pizza_id, comment_text=comment, date_added=datetime.date.today()
         )
 
     pizza = Pizza.objects.get(id=pizza_id)

@@ -32,6 +32,12 @@ def pizza(request, pizza_id):
 
     return render(request, "pizzas/pizza.html", context)
 
+#I'm not sure if this is the right way to do this but i'm going with it
+
+def pizza_pic(request, pizza_id):
+    pizza = Pizza.objects.get(id=pizza_id)
+    
+
 
 def comments(request, pizza_id):
     """Allows user to add a comment"""
@@ -53,3 +59,5 @@ def comments(request, pizza_id):
     context = {"pizza": pizza, "comments": comments}
 
     return render(request, "pizzas/comments.html", context)
+
+

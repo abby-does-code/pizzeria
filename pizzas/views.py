@@ -27,9 +27,8 @@ def pizza(request, pizza_id):
     """Allows user to view individual pizzas"""
     pizza = Pizza.objects.get(id=pizza_id)
     toppings = pizza.topping_set.all()
-    pizza_image = pizza.pizza_image.get()
 
-    context = {"pizza": pizza, "toppings": toppings, "pizza_image": pizza_image}
+    context = {"pizza": pizza, "toppings": toppings}
 
     return render(request, "pizzas/pizza.html", context)
 
@@ -54,3 +53,13 @@ def comments(request, pizza_id):
     context = {"pizza": pizza, "comments": comments}
 
     return render(request, "pizzas/comments.html", context)
+
+
+def pizza_image(request, pizza_id):
+    """Pictures for the pizza...."""
+    pizza = Pizza.objects.get(id=pizza_id)
+    pizza_image = models.ImageField(upload_to="images/")
+
+    context = {"pizza": pizza, "pizza_image": pizza_image}
+
+    return render(request, "pizzas/pizza.html", context)

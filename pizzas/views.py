@@ -23,9 +23,8 @@ def pizzas(request):
 
 
 def pizza(request, pizza_id):
-    pizza = Pizza.object.get(id=pizza_id)
-
-    toppings = pizza.topping_set.order_by("topping_name")
+    pizza = Pizza.objects.get(id=pizza_id)
+    toppings = pizza.topping_set.all()
 
     context = {"pizza": pizza, "toppings": toppings}
 

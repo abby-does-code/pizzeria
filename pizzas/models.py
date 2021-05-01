@@ -23,6 +23,9 @@ class Topping(models.Model):
 
 
 class Comment(models.Model):
-    post = models.ForeignKey(Pizza, on_delete=models.CASCADE)
+    pizza = models.ForeignKey(Pizza, on_delete=models.CASCADE)
     comment_text = models.CharField(max_length=300)
     date_added = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.comment_text

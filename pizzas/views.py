@@ -30,3 +30,7 @@ def pizza(request, pizza_id):
     context = {"pizza": pizza, "toppings": toppings}
 
     return render(request, "pizzas/pizza.html", context)
+
+def comment(request, pizza_id):
+    """Allows user to add a comment"""
+    comment = 

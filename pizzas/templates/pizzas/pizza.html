@@ -14,7 +14,7 @@
         {{ topping }}
     </div>
     <li>
-        <p>Comments: <a href="{% url 'pizzas:comments' %}></p>
+        <p>Comments: <a href="{% url 'pizzas:comments' pizza.id %}""></a></p>
     </li>
     {% endfor %}
 </ul>

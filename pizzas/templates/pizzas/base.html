@@ -1,7 +1,8 @@
 <p>
     <a href="{% url 'pizzas:index' %}">Home Page</a>
     <a href="{% url 'pizzas:pizzas' %}">Pizzas</a>
-    <a href="{% url 'pizzas:comments' %}">Leave a comment</a>"
+    <a href="{% url 'pizzas:comments' pizza.id %}">Leave a Comment</a>
+
 
 </p>
 

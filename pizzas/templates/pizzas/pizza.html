@@ -13,10 +13,11 @@
     <div class="card mb -3">
         {{ topping }}
     </div>
-    <li>
-        <p>Comments: <a href="{% url 'pizzas:comments' pizza.id %}""></a></p>
-    </li>
     {% endfor %}
+    <li>
+        <p>Comments: <a href="{% url 'pizzas:comments' pizza.id %}"">{{c}}</a></p>
+    </li>
+    
 </ul>
 
 

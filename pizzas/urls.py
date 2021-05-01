@@ -20,4 +20,3 @@ urlpatterns = [
     path("pizza_pic/<int:pizza_id>/", views.pizza_pic, name="pizza_pic")
 ]
 
-

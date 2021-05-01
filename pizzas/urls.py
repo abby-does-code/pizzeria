@@ -17,6 +17,7 @@ urlpatterns = [
     path("pizzas/<int:pizza_id>/", views.pizza, name="pizza"),
     # Individual pizzas
     path("comments/<int:pizza_id>/", views.comments, name="comments"),
-    path("pizza_pic/<int:pizza_id>/", views.pizza_pic, name="pizza_pic")
 ]
 
+
+"""path("pizza_pic/<int:pizza_id>/", views.pizza_pic, name="pizza_pic")"""

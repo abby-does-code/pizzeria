@@ -15,10 +15,9 @@
     </div>
     {% endfor %}
     <li>
-        <p>Comments: <a href="{% url 'pizzas:comments' pizza.id %}"">{{c}}</a></p>
+        <p> <a href="{% url 'pizzas:comments' pizza.id %}"">Commment</a></p>
     </li>
     
 </ul>
-
 
 {% endblock content %}

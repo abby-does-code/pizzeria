@@ -3,7 +3,7 @@
 
 {% block page_header %}
 <h2>{{ pizza }}</h2>
-{% block page_header %}
+{% endblock page_header %}
 
 {% block content %}
 <ul>
@@ -12,7 +12,10 @@
     {% for topping in toppings %}
     <div class="card mb -3">
         {{ topping }}
-    </div> 
+    </div>
+    <li>
+        <p>Comments: <a href="{% url 'pizzas:comments' %}></p>
+    </li>
     {% endfor %}
 </ul>
 

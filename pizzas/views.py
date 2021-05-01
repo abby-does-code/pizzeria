@@ -23,6 +23,7 @@ def pizzas(request):
 
 
 def pizza(request, pizza_id):
+    """Allows user to view individual pizzas"""
     pizza = Pizza.objects.get(id=pizza_id)
     toppings = pizza.topping_set.all()
 
